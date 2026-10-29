@@ -1,0 +1,148 @@
+.landing-header {
+  border-bottom: 1px solid var(--color-border);
+  background: white;
+}
+
+.landing-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.5rem;
+}
+
+.landing-wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.landing-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.landing-header-actions a:not(.btn) {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.landing-hero {
+  background: var(--color-primary);
+  color: white;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.landing-hero h1 {
+  color: white;
+  font-size: 2.75rem;
+  max-width: 680px;
+  margin: 0 auto 1rem;
+}
+
+.landing-hero p {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.landing-hero-cta {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+.landing-hero-cta:hover {
+  background: #d9b360;
+}
+
+.landing-section {
+  padding: 4.5rem 1.5rem;
+}
+
+.landing-section-alt {
+  background: var(--color-paper-alt);
+}
+
+.landing-problem-solution {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.landing-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.landing-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.landing-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.landing-feature-card h3 {
+  font-size: 1.05rem;
+}
+
+.landing-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.landing-plan-price {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.landing-plan-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.landing-plan-card ul {
+  color: var(--color-muted);
+  padding-left: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.landing-footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 860px) {
+  .landing-problem-solution,
+  .landing-steps,
+  .landing-features,
+  .landing-plans {
+    grid-template-columns: 1fr;
+  }
+  .landing-hero h1 {
+    font-size: 2rem;
+  }
+}

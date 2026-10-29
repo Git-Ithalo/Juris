@@ -1,0 +1,35 @@
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper-alt);
+  padding: 1.5rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-wordmark {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.auth-subtitle {
+  color: var(--color-muted);
+  margin-top: -0.5rem;
+}
+
+.auth-footer {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}

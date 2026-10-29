@@ -1,0 +1,151 @@
+.dash-shell {
+  min-height: 100vh;
+  display: flex;
+}
+
+.dash-wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+}
+
+.dash-topbar {
+  display: none;
+}
+
+.dash-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: white;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.dash-sidebar-header {
+  padding: 0 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1rem;
+}
+
+.dash-sidebar-user {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin: 0.35rem 0 0 0;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.dash-nav-link {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.dash-nav-link:hover {
+  background: var(--color-paper-alt);
+}
+
+.dash-nav-link.is-active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.dash-logout {
+  margin-top: 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.dash-logout:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.dash-overlay {
+  display: none;
+}
+
+.dash-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+}
+
+@media (max-width: 860px) {
+  .dash-shell {
+    flex-direction: column;
+  }
+
+  .dash-topbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .dash-menu-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    padding: 0.35rem 0.6rem;
+    cursor: pointer;
+  }
+
+  .dash-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 30;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .dash-sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .dash-sidebar .dash-sidebar-header .dash-wordmark {
+    display: block;
+  }
+
+  .dash-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 31, 28, 0.4);
+    z-index: 25;
+  }
+
+  .dash-content {
+    padding: 1.25rem;
+    max-width: 100%;
+  }
+}
